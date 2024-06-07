@@ -40,7 +40,7 @@ def analise(row):
     return row
 
 # Carregar dados do Excel
-df = pd.read_excel(r'C:\Users\mandy\Downloads\Tabela_Pacientes_LMA_Amanda (1).xlsx')
+df = pd.read_excel(r'./Tabela_Pacientes_LMA_Amanda.xlsx')
 
 df['Paciente'] = df['Código BM'].str.extract(r'(\d{4})', expand=False)
 df['Tempo'] = pd.to_datetime(df['Data da coleta'])
